@@ -10,7 +10,6 @@ def softmax(x):
 
     x = np.exp(x - np.max(x, axis=1).reshape(x.shape[0], 1)) 
     return x / np.sum(x, axis=1).reshape(x.shape[0], 1)
-    #return (x.T * (1./np.sum(x, axis=1))).T
 
 def test_softmax_basic():
     """
